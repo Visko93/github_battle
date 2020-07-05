@@ -90,23 +90,23 @@ export default class Results extends React.Component {
 
     return (
       <>
-        <div className='grid space-around container-sm'>
+        <div className='grid-results space-around container-sm'>
           <Card 
-          header={winner.score === loser.score ? 'Tie' : 'Winner'}
-          subheader={`Score: ${winner.score}`}
-          avatar={winner.profile.avatar_url}
-          href ={winner.profile.html_url}
-          name={winner.profile.login}
+            header={winner.score === loser.score ? 'Tie' : 'Winner'}
+            subheader={`Score: ${winner.score}`}
+            avatar={winner.profile.avatar_url}
+            href ={winner.profile.html_url}
+            name={winner.profile.login}
           >
             <ProfileList profile={winner.profile} />
           </Card>
 
           <Card 
-          header={winner.score === loser.score ? 'Tie' : 'Winner'}
-          subheader={`Score: ${loser.score}`}
-          avatar={loser.profile.avatar_url}
-          href ={loser.profile.html_url}
-          name={loser.profile.login}
+            header={winner.score === loser.score ? 'Tie' : 'Winner'}
+            subheader={`Score: ${loser.score}`}
+            avatar={loser.profile.avatar_url}
+            href ={loser.profile.html_url}
+            name={loser.profile.login}
           >
             <ProfileList profile={loser.profile} />
           </Card>
