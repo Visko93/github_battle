@@ -159,6 +159,11 @@ export default class Battle extends React.Component {
       return <Results 
         playerOne={this.state.playerOne}
         playerTwo={this.state.playerTwo}
+        onReset={()=> this.setState({
+          playerOne: null,
+          playerTwo: null,
+          battle: false
+        })}
       />
     }
 
