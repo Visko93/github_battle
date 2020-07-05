@@ -1,11 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { ThemeConsumer } from "../contexts/theme";
+
 export default function Card ({ header, subheader, avatar, href, name, children}) {
   
   
     return (
-        <div className='card bg-light'>
+
+      <ThemeConsumer>
+        {({ theme }) => (
+          <div className={`card bg-${theme}`}>
             <h4 className="header-lg center-text">
               {header}
             </h4>
@@ -24,6 +29,9 @@ export default function Card ({ header, subheader, avatar, href, name, children}
             </h2>
 						{children}
           </div>
+        )}
+      </ThemeConsumer>
+        
        )
 }
 
