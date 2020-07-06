@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 
 import { ThemeProvider } from './contexts/theme'
 
@@ -19,19 +19,13 @@ import './index.css';
 // UI
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      theme: 'light',
-      toogleTheme: () => {
-        this.setState(({theme}) => ({
-          theme: theme === 'light' ? 'dark': 'light'
-        }))
-      }
-
+  state = {
+    theme: 'light',
+    toogleTheme: () => {
+      this.setState(({theme}) => ({
+        theme: theme === 'light' ? 'dark': 'light'
+      }))
     }
-  console.log(this.state.theme)
 
   }
   render () {
@@ -40,10 +34,13 @@ class App extends React.Component {
         <ThemeProvider value={this.state}>
           <div className={this.state.theme}>
             <div className='container'>
-              <Nav />
-              <Route exact path='/' component={Popular} />
-              <Route exact path='/battle' component={Battle} />
-              <Route path='/battle/results' component={Results}/>
+            <Nav />
+              <Switch>
+                <Route exact path='/' component={Popular} />
+                <Route exact path='/battle' component={Battle} />
+                <Route path='/battle/results' component={Results}/>
+                <Route render={() => <h1>404</h1>}/>
+              </Switch>
             </div>
           </div>
         </ThemeProvider>
