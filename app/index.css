@@ -49,6 +49,10 @@ li {
   transition: ease-out 0.3s;
 }
 
+.nav li {
+  margin-right: 10px;
+}
+
 .nav-link:hover {
   cursor: pointer;
   color: rgb(187, 46, 31);
@@ -58,19 +62,22 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-template-rows: auto; 
-  column-gap: 15px;
+  column-gap: 10px;
   row-gap: 15px;
 }
 .grid-results {
   display: grid;
-  grid-template-areas:  "One  .  Three";
+  grid-template-columns: 1fr  1fr;
   grid-template-rows: auto; 
-  column-gap: 15px;
+  column-gap: 25%;
   row-gap: 50px;
 }
 
 .space-around {
   justify-content: space-around;
+}
+.space-between {
+  justify-content: space-between;
 }
 
 .header-lg {
