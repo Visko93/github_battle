@@ -1,4 +1,4 @@
-﻿# Repositories and GitBattle
+﻿# Repositories Rank and GitBattle
 
 ---
 [Link to the project](https://silly-boyd-fd9044.netlify.app/battle)
@@ -8,7 +8,7 @@
 This project aims to cover core concepts of the javaScript language and also, React framework.
 
 
-## Tecnologias Utilizadas
+## Tech used
 
 - ES6+
 - Webpack (Babel | CSS - loader | Style - Loader )
@@ -20,12 +20,12 @@ This project aims to cover core concepts of the javaScript language and also, Re
 - [Github API](https://developer.github.com/)
 
 
-## Clonar Projeto
+## Clone the project
 ```bash
-//Clone o repositório
+//Clone
 git clone https://github.com/Visko93/App-React-Flux-Cursos
 
-//Inicie os módulos
+//Install dependencies
 yarn init
 ```
 
